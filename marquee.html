@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>marquee pong</title>
+    <style>
+      #field { width: 100%; height: 400px; background: #222}
+      #field > marquee { position: absolute; }
+      #field marquee { height: 400px; }
+      .paddle { width: 20px; height: 80px; background: #090; }
+      #left-paddle { padding-left: 30px; }
+      #right-paddle { padding-right: 30px; }
+      #ball-v div { width: 20px; height: 20px; background: #090; }
+      #get-ready { text-align: center; font-family: fixed; font-size: 500%; display: none; }
+      body { font-family: fixed; background: #000; color: #0f0;}
+      a { color: #0f0; }
+      table { font-weight: bold }
+    </style>
+
+    <script src="http://www.google.com/jsapi"></script>
+    <script>
+      // Load jQuery
+      google.load("jquery", "1");
+    </script>
+    <script src="marquee.js"></script>
+  </head>
+  <body>
+    <div class="warn"><blink>WARNING</blink>: REQUIRES FIREFOX 3.0</div>
+    <div>USE UP AND DOWN ARROW KEYS TO MOVE. IF IT DOES NOT WORK, FIX IT AND SEND ME A PATCH</div>
+    <table width="100%">
+        <tr>
+          <td><span id="l-score">0</span> points</td>
+          <td style="text-align: right;"><span id="r-score">0</span> points</td>
+        </tr>
+    </table>
+
+    <div id="field">
+      <marquee id="left-paddle" direction="down" behavior="slide">
+        <div class="paddle"></div>
+      </marquee>
+
+      <marquee id="right-paddle" direction="down" behavior="slide" scrollamount=15>
+        <div class="paddle" style="float: right;"></div>
+      </marquee>
+
+      <marquee id="ball-h" direction="right" behavior="alternate" scrollamount="10" scrolldelay="50">
+        <marquee id="ball-v" direction="down" behavior="alternate" scrollamount="10" scrolldelay="50">
+          <div id="ball"></div>
+        </marquee>
+      </marquee>
+      <div id="get-ready"><blink>GET READY!</blink></div>
+    </div>
+
+    <hr>
+    <address><a href="mailto:todd@lipcon.org">Todd Lipcon</a></address>
+<!-- Created: Sun Dec  7 21:23:07 EST 2008 -->
+<!-- hhmts start -->
+Last modified: Sun Dec  7 23:10:57 EST 2008
+<!-- hhmts end -->
+  </body>
+</html>
