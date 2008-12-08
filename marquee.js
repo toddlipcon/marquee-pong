@@ -4,7 +4,6 @@ PADDLE_SPEED=10;
 R_PADDLE_SPEED = 10;
 
 function init() {
-    console.log("hi");
     $('html').keydown(keydown);
     $('html').keyup(keyup);
     setTimeout(resetBall, 100);
@@ -46,7 +45,6 @@ function resetBall() {
 
 function checkBounds(e) {
     if (checkIntersect($('#ball'), $('#left-paddle div'))) {
-        console.log("l intersect");
         var center = $('#left-paddle div').position().top +
             $('#left-paddle div').height() / 2;
         var bcenter = $('#ball').position().top + $('#ball').height() / 2;
